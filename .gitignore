@@ -1,0 +1,44 @@
+# --- Claude Code -----------------------------------------------------------
+.claude/
+CLAUDE.md.local
+
+# --- pixi ------------------------------------------------------------------
+# Keep pixi.toml and pixi.lock (they define/reproduce the env); ignore the
+# materialised environment.
+.pixi/
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.ipython/
+
+# --- Jupyter ---------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- Generated lesson artifacts (produced on demand by tools/nb2pdf.py) ----
+modules/**/*.pdf
+modules/**/*.html
+
+# --- Editors / OS ----------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# --- Private / not-for-publication -----------------------------------------
+# Business material, internal notes, and authoring workflow — kept out of the
+# public repo.
+docs/niche-market-ideas/
+QA.md
+instructions.txt
+CHANGELOG.md
+SYLLABUS.md
+
+# Modules not yet revised for release (un-ignore each as it's finalised).
+modules/01-nonlinear-least-squares/

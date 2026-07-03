@@ -1,0 +1,28 @@
+[workspace]
+authors = ["Carlos Argueta <c.argueta@s1s2.ai>"]
+channels = ["conda-forge"]
+name = "factor-graphs-from-scratch"
+platforms = ["linux-64"]
+version = "0.1.1"
+description = "Hands-on course: factor-graph state estimation, from Kalman to GTSAM"
+
+[tasks]
+lab = "jupyter lab"
+# Execute every lesson notebook headless to catch breakage (used as a smoke test).
+check = "jupyter nbconvert --to notebook --execute --inplace modules/*/lesson.ipynb"
+# Export a notebook to a print-ready PDF (executed cells, math via MathJax, no
+# clipped lines). Pass the notebook or module dir, e.g.:
+#   pixi run pdf modules/00-ekf-to-least-squares/lesson.ipynb
+# See tools/nb2pdf.py for options (--no-execute, --output, --keep-html).
+pdf = "python tools/nb2pdf.py"
+
+[dependencies]
+python = ">=3.11,<3.13"
+numpy = "<1.28"
+scipy = ">=1.11"
+sympy = ">=1.12"
+matplotlib = ">=3.8"
+jupyterlab = ">=4.6.1,<5"
+nbconvert = ">=7.0"
+ipykernel = ">=6.0"
+gtsam = ">=4.2"

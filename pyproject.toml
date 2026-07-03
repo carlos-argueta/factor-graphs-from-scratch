@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "factor-graphs-from-scratch"
+version = "0.1.1"
+description = "Hands-on course: factor-graph state estimation, from Kalman to GTSAM"
+authors = [{ name = "Carlos Argueta", email = "c.argueta@s1s2.ai" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "numpy",
+    "scipy",
+    "sympy",
+    "matplotlib",
+]
+
+# GTSAM is only needed from Module 3 on; keep it optional so early modules stay
+# light on Colab.  Install with:  pip install -e ".[gtsam]"
+[project.optional-dependencies]
+gtsam = ["gtsam>=4.2"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
