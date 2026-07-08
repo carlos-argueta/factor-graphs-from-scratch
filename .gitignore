@@ -34,11 +34,8 @@ modules/**/*.html
 # --- Private / not-for-publication -----------------------------------------
 # Business material, internal notes, and authoring workflow — kept out of the
 # public repo.
-docs/niche-market-ideas/
+docs/
 QA.md
 instructions.txt
 CHANGELOG.md
 SYLLABUS.md
-
-# Modules not yet revised for release (un-ignore each as it's finalised).
-modules/01-nonlinear-least-squares/

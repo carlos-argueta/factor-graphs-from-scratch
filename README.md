@@ -4,7 +4,7 @@ A hands-on course that takes you from the classic **Gaussian filters** (Kalman /
 Information filter, bundled in [`src/gaussian_filters/`](src/gaussian_filters)) to
 **factor-graph** state estimation, SLAM, calibration, and the production **GTSAM/iSAM2** stack.
 
-We build a minimal factor-graph engine from scratch in numpy (`src/fgslam/`) to earn the
+We build a minimal factor-graph engine from scratch in numpy (`src/factorgraph/`) to earn the
 intuition, then map every concept onto GTSAM.
 
 ## Run it in the browser (Google Colab)
@@ -16,7 +16,7 @@ Each notebook carries an "Open in Colab" badge in its top cell:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/carlos-argueta/factor-graphs-from-scratch/blob/main/modules/00-ekf-to-least-squares/lesson.ipynb)
 ```
 
-The first code cell clones this repo on Colab so the `gaussian_filters` and `fgslam`
+The first code cell clones this repo on Colab so the `gaussian_filters` and `factorgraph`
 packages import cleanly. Or, from any notebook:
 `!pip install git+https://github.com/carlos-argueta/factor-graphs-from-scratch.git`.
 
@@ -32,7 +32,7 @@ pixi run check        # execute every lesson notebook headless (smoke test)
 ```
 
 Not using pixi? The project is also pip-installable (`pip install -e .`), which puts the
-`gaussian_filters` and `fgslam` packages on your path.
+`gaussian_filters` and `factorgraph` packages on your path.
 
 ## Printing a lesson (PDF)
 
@@ -61,10 +61,10 @@ pixi run pdf modules/00-ekf-to-least-squares                # a dir -> lesson.ip
 ```
 .
   pixi.toml        the course environment
-  pyproject.toml   pip-installable packaging (gaussian_filters + fgslam)
+  pyproject.toml   pip-installable packaging (gaussian_filters + factorgraph)
   tools/nb2pdf.py  export a notebook to a print-ready PDF (`pixi run pdf`)
   src/gaussian_filters/  the reference Kalman/EKF/Information filters (course starting point)
-  src/fgslam/      the factor-graph engine we build, module by module
+  src/factorgraph/       the factor-graph engine we build, module by module
   modules/
     00-ekf-to-least-squares/   lesson.ipynb · exercises.ipynb · solutions/
     ...                        (more modules added as the course grows)

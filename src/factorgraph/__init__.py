@@ -1,11 +1,11 @@
-"""fgslam — a minimal factor-graph / nonlinear-least-squares engine built from
+"""factorgraph — a minimal factor-graph / nonlinear-least-squares engine built from
 scratch, module by module, alongside the course.
 
 The point is not to compete with GTSAM but to *earn the intuition*: every piece we
 later use in GTSAM, we first build here in plain numpy.
 
 Built so far:
-- M1: :mod:`fgslam.nls` — Gauss-Newton / Levenberg-Marquardt with a Huber robust kernel.
+- M1: :mod:`factorgraph.nls` — Gauss-Newton / Levenberg-Marquardt with a Huber robust kernel.
 
 Coming:
 - M3: variables, factors, the bipartite graph, batch solve.
@@ -13,7 +13,7 @@ Coming:
 - M5: variable elimination, incremental (iSAM-style) updates.
 """
 
-from fgslam.nls import (
+from factorgraph.nls import (
     HuberKernel,
     NLSResult,
     gauss_newton,
