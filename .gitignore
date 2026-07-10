@@ -33,7 +33,6 @@ modules/**/*.html
 
 # --- Unfinished modules (un-ignore each as it's finalised) -----------------
 
-
 # --- Private / not-for-publication -----------------------------------------
 # Business material, internal notes, and authoring workflow — kept out of the
 # public repo.
